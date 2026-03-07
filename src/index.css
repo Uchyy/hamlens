@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+}
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 30% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 30% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 30% 10%;
+
+    --primary: 220 45% 20%;
+    --primary-foreground: 45 100% 96%;
+
+    --secondary: 220 15% 92%;
+    --secondary-foreground: 220 30% 15%;
+
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 220 45% 10%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 38 92% 50%;
+
+    --radius: 0.625rem;
+
+    --sidebar-background: 220 30% 10%;
+    --sidebar-foreground: 220 10% 90%;
+    --sidebar-primary: 38 92% 50%;
+    --sidebar-primary-foreground: 220 45% 10%;
+    --sidebar-accent: 220 30% 16%;
+    --sidebar-accent-foreground: 220 10% 90%;
+    --sidebar-border: 220 20% 18%;
+    --sidebar-ring: 38 92% 50%;
+
+    /* Custom tokens */
+    --navy: 220 45% 15%;
+    --navy-light: 220 35% 25%;
+    --amber: 38 92% 50%;
+    --amber-light: 40 95% 62%;
+    --success: 152 60% 40%;
+    --info: 205 75% 50%;
+    --warning: 38 92% 50%;
+
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+
+    /* Distinct utility section themes */
+    --insights-bg: 245 30% 14%;
+    --insights-fg: 245 15% 92%;
+    --insights-border: 245 25% 22%;
+    --insights-muted: 245 15% 45%;
+    --insights-accent: 270 70% 60%;
+
+    --links-bg: 160 25% 12%;
+    --links-fg: 160 15% 92%;
+    --links-border: 160 20% 20%;
+    --links-muted: 160 15% 42%;
+    --links-accent: 152 60% 50%;
+
+    --compare-bg: 20 25% 12%;
+    --compare-fg: 20 15% 92%;
+    --compare-border: 20 20% 20%;
+    --compare-muted: 20 15% 42%;
+    --compare-accent: 25 90% 55%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(220 45% 12%) 0%, hsl(220 35% 22%) 50%, hsl(225 40% 18%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(38 92% 50%) 0%, hsl(45 95% 58%) 100%);
+    --shadow-card: 0 1px 3px hsl(220 30% 10% / 0.06), 0 4px 12px hsl(220 30% 10% / 0.04);
+    --shadow-card-hover: 0 4px 12px hsl(220 30% 10% / 0.1), 0 12px 32px hsl(220 30% 10% / 0.06);
+    --shadow-hero: 0 20px 60px hsl(220 30% 10% / 0.15);
+
+    --utility-card-bg: 220 30% 14%;
+    --utility-card-fg: 220 10% 92%;
+    --utility-card-muted: 220 15% 40%;
+    --utility-card-border: 220 25% 22%;
+  }
+}
+
+
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+  }
+}
