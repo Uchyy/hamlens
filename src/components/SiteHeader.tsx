@@ -10,16 +10,16 @@ const SiteHeader = () => {
 
   return (
     <header className={`sticky top-0 z-50 border-b border-border/50 backdrop-blur-md ${isDashboard ? "bg-card/90" : "bg-primary/90"}`}>
-      <div className="container flex items-center justify-between h-14 sm:h-16">
+      <div className="max-w-70vh flex items-center justify-between h-14 sm:h-16 px-6">
         <Link to="/" className="flex items-center gap-2.5">
-          <img src={cityLensLogo} alt="HamLens" className="w-8 h-8 rounded-lg object-contain" />
+          <img src={cityLensLogo} alt="HamLens" className="w-12 h-12 rounded-lg object-contain" />
           <span className={`font-display text-lg font-bold tracking-tight ${isDashboard ? "text-card-foreground" : "text-primary-foreground"}`}>
             HamLens
           </span>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden sm:flex items-center gap-6">
+        <nav className="hidden sm:flex items-center justify-end gap-6 ml-auto">
           {["Datasets", "About", "API"].map((item) => (
             <span
               key={item}

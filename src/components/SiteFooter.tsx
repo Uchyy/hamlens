@@ -3,12 +3,12 @@ import cityLensLogo from "@/assets/citylens-logo.png";
 
 const SiteFooter = () => (
   <footer style={{ backgroundColor: "hsl(var(--utility-card-bg))", borderTop: "1px solid hsl(var(--utility-card-border))" }}>
-    <div className="container py-10 sm:py-14 px-4  mx-auto">
+    <div className="container py-10 sm:py-14 px-8 sm:px-8 mx-auto ">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
         {/* Brand */}
         <div className="lg:col-span-2">
           <Link to="/" className="flex items-center gap-2.5 mb-3">
-            <img src={cityLensLogo} alt="HamLens" className="w-7 h-7 rounded-md object-contain" />
+            <img src={cityLensLogo} alt="HamLens" className="w-12 h-12 rounded-md object-contain" />
             <span className="font-display text-lg font-bold tracking-tight" style={{ color: "hsl(var(--utility-card-fg))" }}>HamLens</span>
           </Link>
           <p className="text-sm font-body leading-relaxed max-w-xs" style={{ color: "hsl(var(--utility-card-muted))" }}>
