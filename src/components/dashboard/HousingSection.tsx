@@ -51,7 +51,7 @@ const HousingSection = () => (
         <YAxis tick={{ fontSize: 11, fontFamily: "DM Sans" }} stroke="hsl(220, 10%, 45%)" tickFormatter={formatPrice} />
         <Tooltip
           contentStyle={{ fontFamily: "DM Sans", fontSize: 12, borderRadius: 8, border: "1px solid hsl(220, 15%, 88%)" }}
-          formatter={(v: number) => [`£${v.toLocaleString()}`, "Avg Price"]}
+          formatter={(value: any) => [`£${typeof value === 'number' ? value.toLocaleString() : value}`, "Avg Price"]}
         />
         <Area type="monotone" dataKey="avgPrice" stroke="hsl(38, 92%, 50%)" fill="url(#priceGrad)" strokeWidth={2.5} />
       </AreaChart>
