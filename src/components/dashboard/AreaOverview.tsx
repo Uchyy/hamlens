@@ -27,19 +27,19 @@ const AreaOverviewSection = () => (
     {/* Content area */}
     <div className="px-5 sm:px-8 py-5 sm:py-7">
       {/* Key stats */}
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:mt-7">
+        <div className="flex flex-col gap-6 sm:flex-row sm:flex-wrap sm:items-center sm:mt-7">
             {[
             { icon: MapPin, label: "Postcode Area", value: postcodeData.postcode },
             { icon: Building2, label: "Local Authority", value: postcodeData.localAuthority },
             { icon: MapPin, label: "Region", value: postcodeData.region },
             { icon: Users, label: "Population", value: postcodeData.population.toLocaleString() },
             ].map((item) => (
-            <div key={item.label} className="flex items-start gap-8">
+            <div key={item.label} className="flex items-start gap-5">
                 <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center shrink-0">
                 <item.icon className="h-4 w-4 text-accent" />
                 </div>
                 <div>
-                <div className="text-lg text-muted-foreground font-body uppercase tracking-wider mb-0.5">{item.label}</div>
+                <div className="text-base text-muted-foreground font-body uppercase tracking-wider mb-0.5">{item.label}</div>
                 <div className="text-sm text-card-foreground font-body font-semibold">{item.value}</div>
                 </div>
             </div>
